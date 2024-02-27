@@ -256,20 +256,10 @@ textarea {
     font-size: 2rem;
   }
 
-  /*** ABOUT MOBILE STYLES ***/
-  .about h1 {
-    /* display: none; */
-    font-size: 1.5rem;
-  }
-
- 
-
   .about img {
     width: 200px;
   }
 
-
-  /*** CONTACT MOBILE STYLES ***/
   .contact form {
     width: 100%;
   }
@@ -289,6 +279,4 @@ textarea {
     height: 50px;
   }
   
-
-
 }
