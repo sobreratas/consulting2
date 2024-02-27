@@ -15,28 +15,10 @@
 
 html,
 body {
-  overflow: hidden;
   font-family: "DM Sans", Arial, Helvetica, sans-serif;
   background-color: var(--background-color);
-  /* border: 3px solid green; */
 }
 
-input,
-textarea {
-  color: #000;
-  padding: 6px;
-  font-family: "DM Sans", Arial, Helvetica, sans-serif;
-  font-size: 1rem;
-}
-
-/*** Overall Site Container Styles ***/
-.site-container {
-  width: 100%;
-  /* height: 100vh; */
-  overflow: hidden;
-  position: relative;
-  /* border: 3px solid red; */
-}
 
 /*** Home Section Styles ***/
 .home-text {
@@ -52,7 +34,6 @@ textarea {
 
 .home-text h1 {
   font-size: 3rem;
-  /* text-transform: uppercase; */
 }
 
 .home-text p {
@@ -70,7 +51,7 @@ nav {
   gap: 15px;
 }
 
-nav button {
+nav a {
   font-family: "DM Sans", Arial, Helvetica, sans-serif;
   padding: 10px;
   font-size: 1rem;
@@ -78,16 +59,13 @@ nav button {
   border: none;
   cursor: pointer;
   color: var(--text-color);
+  text-decoration: none;
 }
 
-nav button:hover {
+nav a:hover {
   color: var(--blue-color);
   transition: 0.3s ease-in-out;
 }
-
-/* .content-container {
-  height: 100vh;
-} */
 
 /*** Active State ***/
 .active {
@@ -123,7 +101,7 @@ nav button:hover {
   color: rgb(181, 181, 181);
 }
 
-.about-box {
+.about {
   display: flex;
   justify-content: start;
   flex-direction: column;
@@ -140,7 +118,7 @@ nav button:hover {
   width: 70%;
 }
 
-.about-box img {
+.about img {
   border-radius: 50%;
   width: 300px;
 }
@@ -187,7 +165,7 @@ nav button:hover {
 }
 
 /*** PROJECT STYLES ***/
-.clients-box {
+.clients {
   display: flex;
   justify-content: start;
   flex-direction: column;
@@ -216,7 +194,7 @@ nav button:hover {
 }
 
 /*** CONTACT STYLES ***/
-.contact-box {
+.contact {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -230,7 +208,7 @@ form {
   padding: 40px;
 }
 
-.contact-box form button {
+.contact form button {
   width: 150px;
   display: block;
   margin: 0 auto;
@@ -242,7 +220,7 @@ form {
   background-color: var(--blue-color);
 }
 
-.contact-box form button:hover {
+.contact form button:hover {
   cursor: pointer;
   filter: brightness(85%);
   transition: 0.3s ease-in-out;
@@ -253,23 +231,18 @@ form {
   flex-direction: column;
 }
 
+input,
+textarea {
+  color: #000;
+  padding: 6px;
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+
 /*** MOBILE STYLES ***/
-/*** STARTE HERE ***/
 
 @media (max-width: 600px) {
-  html,
-  body {
-    /* height: 100vh; */
-    overflow: hidden;
-  }
-
-  .site-container {
-    height: 90vh;
-  }
-
-  /*** HOME MOBILE STYLES ***/
- 
-
+  
   .home-text img {
     margin-top: 30px;
     width: 100%;
@@ -284,58 +257,20 @@ form {
   }
 
   /*** ABOUT MOBILE STYLES ***/
-  .about-box h1 {
+  .about h1 {
     /* display: none; */
     font-size: 1.5rem;
   }
 
-  .about-box {
-    gap: 0;
-    overflow: scroll;
-  }
+ 
 
-  .about-box img {
+  .about img {
     width: 200px;
   }
 
 
-  .logos-mobile-container {
-    display: none;
-    /* margin-top: 15px;
-    margin-bottom: 100px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    width: 90%; */
-  }
-
-  .logos-mobile-container img {
-    width: 50px;
-  }
-
-  /*** clients MOBILE STYLES ***/
-  .clients-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-
-  .clients-logo-box {
-    height: 600px;
-    overflow: scroll;
-  }
-
-  ::-webkit-scrollbar {
-    width: 0px;
-    background: transparent; /* make scrollbar transparent */
-  }
-
   /*** CONTACT MOBILE STYLES ***/
-  .contact-box form {
+  .contact form {
     width: 100%;
   }
 
